@@ -5,8 +5,9 @@
  * @format
  */
 
-import React from 'react';
+import FlareLane from '@flarelane/react-native-sdk';
 import type {PropsWithChildren} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -56,6 +57,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 }
 
 function App(): React.JSX.Element {
+  FlareLane.initialize('a43cdc82-0ea5-4fdd-aebc-1940fe99b6c3', true);
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
